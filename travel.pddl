@@ -1,12 +1,12 @@
 (define (domain travel-strips)
-  (:requirements :strips)
+  (:requirements :strips :fluents)
   (:types city hotel)
   (:predicates (in ?x - city) (visited ?x - city) (not-visited ?x - city)
            (starting ?x - city) (complete) (not-complete) (just-landed)
            (not-just-landed)
            (connected ?x - city ?y - city)
            (hotel-in ?hotel - hotel ?city - city))
-
+  (:functions (min-ciutats))
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)
