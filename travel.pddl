@@ -38,7 +38,7 @@
 
   (:action return-against
     :parameters (?x - city ?y - city)
-    :precondition (and (in ?x) (not-visited ?y) (not-complete)
+    :precondition (and (in ?x) (starting ?y) (not-complete)
                (connected ?y ?x) (not-just-landed))
     :effect (and (not (in ?x)) (in ?y) (not (not-complete)) (complete) 
             (not (not-just-landed)) (just-landed)))
