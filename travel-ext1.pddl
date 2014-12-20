@@ -7,7 +7,10 @@
            (connected ?x - city ?y - city)
            (hotel-in ?hotel - hotel ?city - city)
            (not-started))
-  (:functions (min-dies))
+  (:functions (min-days ?c - city) 
+              (max-days ?c - city)
+              (spent-days ?c - city)
+              (min-days-viatge))
 
   (:action start
     :parameters (?x - city)
@@ -18,7 +21,7 @@
   (:action spend-night
     :parameters (?x - city ?h - hotel)
     :precondition (and (in ?x) (hotel-in ?h ?x) (just-landed))
-    :effect (and (in ?x) (not-just-landed) (not (just-landed)) (decrease (min-dies) 1)))
+    :effect (and (in ?x) (not-just-landed) (not (just-landed)) (decrease (min-days-viatge) 1)))
 
      
   (:action go-along
