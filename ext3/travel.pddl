@@ -10,7 +10,12 @@
               (spent-days)
               (min-days-viatge)
               (sum-interest)
-              (interest ?x - city))
+              (interest ?x - city)
+              (min-cost-travel)
+              (max-cost-travel)
+              (cost-travel)
+              (price ?x - city ?y - city)
+              (price-hotel ?h - hotel ?x - city))
 
   (:action start
     :parameters (?x - city)
@@ -21,23 +26,29 @@
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)
-    :precondition (and (in ?x) (hotel-in ?h ?x) (< (spent-days) (max-days)))
-    :effect (and (in ?x) (increase (spent-days) 1) (decrease (min-days-viatge) 1)))
-
+    :precondition (and (in ?x) (hotel-in ?h ?x) (< (spent-days) (max-days)) 
+                  (<= (+ (cost-travel) (price-hotel ?h ?x)) (max-cost-travel)))
+    :effect (and (in ?x) (increase (spent-days) 1) (decrease (min-days-viatge) 1)
+            (increase (cost-travel) (price-hotel ?h ?x))))
      
   (:action go-along
     :parameters (?x - city ?y - city)
     :precondition (and (in ?x) (not-visited ?y)
-               (connected ?x ?y) (>= (spent-days) (min-days)))
+                  (connected ?x ?y) (>= (spent-days) (min-days))
+                  (<= (+ (cost-travel) (price ?x ?y)) (max-cost-travel)))
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
             (decrease (spent-days) (spent-days))
-            (increase (sum-interest) (interest ?y))))
+            (increase (sum-interest) (interest ?y))
+            (increase (cost-travel) (price ?x ?y))))
 
   (:action go-against
     :parameters (?x - city ?y - city)
     :precondition (and (in ?x) (not-visited ?y)
-               (connected ?y ?x) (>= (spent-days) (min-days)))
+                  (connected ?y ?x) (>= (spent-days) (min-days))
+                  (<= (+ (cost-travel) (price ?y ?x)) (max-cost-travel)))
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
             (decrease (spent-days) (spent-days))
-            (increase (sum-interest) (interest ?y))))
-)
+            (increase (sum-interest) (interest ?y))
+            (increase (cost-travel) (price ?y ?x))))
+            
+ )
