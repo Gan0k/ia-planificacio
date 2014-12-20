@@ -5,8 +5,14 @@
            (just-landed)
            (not-just-landed)
            (connected ?x - city ?y - city)
-           (hotel-in ?hotel - hotel ?city - city))
+           (hotel-in ?hotel - hotel ?city - city)
+           (not-started))
   (:functions (min-ciutats))
+
+  (:action start
+    :parameters (?x - city)
+    :precondition (not-started)
+    :effect (and (in ?x) (not (not-started)) (just-landed) (not (not-just-landed)) (visited ?x) (not (not-visited ?x)))) 
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)

@@ -3,9 +3,10 @@
   (:objects c1 c2 - city 
             h1 h2 - hotel)
   (:init (connected c1 c2)
+         (not-started)
          (hotel-in h1 c1) (hotel-in h2 c2)
-         (visited c1) (not-visited c2)
-         (in c1) (not-just-landed)
-         (= (min-ciutats) 0))
+         (not-visited c1) (not-visited c2)
+         (not-just-landed)
+         (= (min-ciutats) 2))
   (:goal (<= (min-ciutats) 0))
 )
