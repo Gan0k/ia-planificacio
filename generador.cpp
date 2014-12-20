@@ -111,10 +111,24 @@ int main(int argc, char** argv) {
             else ++endline;
         }
     }
+    endline = 1;
+    for(int i=0; i<numCiutats; ++i) {
+        cout << "(not visited c" << i+1 << ") ";
+        if(endline%3 == 0) {
+            cout << endl; printSpaces();
+            endline = 1;
+        }
+        else ++endline;
+    }
+    cout << "(not-just-landed) (not-started) (= (min-ciutats) " << minDies << ")" << endl;;
     cout << endl;
     ----spaceLevel;
     printSpaces();
     cout << ")" << endl;
+    printSpaces();
+    cout << "(:goal (<= (min-ciutats) 0))" << endl;
+    --spaceLevel;
+    printSpaces();
     cout << ")" << endl;
     
 }
