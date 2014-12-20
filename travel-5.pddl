@@ -1,4 +1,4 @@
-(define (problem ten-cities)
+(define (problem five-cities)
   (:domain travel-strips)
   (:objects c1 c2 c3 c4 c5 - city 
             h1 h2 h3 h4 h5 - hotel)
@@ -9,7 +9,7 @@
          (visited c1) (not-visited c2) (not-visited c3)
          (not-visited c4) (not-visited c5)
          (in c1) (starting c1) (not-complete) (not-just-landed)
-         (= (min-ciutats) 0))
+         (= (min-ciutats) 3))
   (:goal (and (visited c1) (visited c2) (visited c3) (visited c4)
-              (visited c5) (complete)))
+              (visited c5) (complete) (<= (min-ciutats) 0)))
 )

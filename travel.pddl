@@ -11,7 +11,7 @@
   (:action spend-night
     :parameters (?x - city ?h - hotel)
     :precondition (and (in ?x) (hotel-in ?h ?x) (not-complete) (just-landed))
-    :effect (and (in ?x) (not-just-landed) (not (just-landed))))
+    :effect (and (in ?x) (not-just-landed) (not (just-landed)) (decrease (min-ciutats) 1)))
 
      
   (:action go-along

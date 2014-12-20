@@ -1,0 +1,11 @@
+(define (problem two-cities)
+  (:domain travel-strips)
+  (:objects c1 c2 - city 
+            h1 h2 - hotel)
+  (:init (connected c1 c2)
+         (hotel-in h1 c1) (hotel-in h2 c2)
+         (visited c1) (not-visited c2)
+         (in c1) (starting c1) (not-complete) (not-just-landed)
+         (= (min-ciutats) 0))
+  (:goal (and (visited c1) (visited c2) (complete) (<= (min-ciutats) 0)))
+)
