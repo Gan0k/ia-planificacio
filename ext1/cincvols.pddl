@@ -1,0 +1,15 @@
+(define (problem cincvols)
+    (:requirements :strips :fluents)
+    (:domain travel-strips)
+    (:objects c1 c2 c3 c4 c5  - city
+              h1 h2 h3 h4 h5  - hotel)
+    (:init  (connected c1 c4) (connected c2 c1) (connected c2 c4) 
+            (connected c3 c1) (connected c3 c2) (connected c3 c4) 
+            (connected c3 c5) (connected c5 c1) (connected c5 c2) 
+            (connected c5 c4) (hotel-in h1 c1) (hotel-in h2 c2) (hotel-in h3 c3) 
+            (hotel-in h4 c4) (hotel-in h5 c5) (not-visited c1) (not-visited c2) (not-visited c3) 
+            (not-visited c4) (not-visited c5) (not-started) (= (min-days) 1) (= (max-days) 1) (= (spent-days) 0) (= (min-days-viatge) 5)
+
+    )
+    (:goal (<= (min-days-viatge) 0))
+)
