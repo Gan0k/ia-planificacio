@@ -1,5 +1,5 @@
 (define (domain travel-strips)
-  (:requirements :strips :typing :fluents)
+  (:requirements :strips :fluents)
   (:types city hotel)
   (:predicates (in ?x - city) (visited ?x - city) (not-visited ?x - city)
            (connected ?x - city ?y - city)
@@ -17,7 +17,8 @@
     :parameters (?x - city)
     :precondition (not-started)
     :effect (and (in ?x) (not (not-started)) 
-            (visited ?x) (not (not-visited ?x)) (decrease (spent-days) (spent-days))))
+            (visited ?x) (not (not-visited ?x))
+            (increase (sum-interest) (interest ?x))))
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)
@@ -31,7 +32,6 @@
                (connected ?x ?y) (>= (spent-days) (min-days)))
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
             (decrease (spent-days) (spent-days))
-            (increase (num-cities) 1)
             (increase (sum-interest) (interest ?y))))
 
   (:action go-against
@@ -39,6 +39,6 @@
     :precondition (and (in ?x) (not-visited ?y)
                (connected ?y ?x) (>= (spent-days) (min-days)))
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
-            (decrease (spent-days) (spent-days))))
-
- )
+            (decrease (spent-days) (spent-days))
+            (increase (sum-interest) (interest ?y))))
+)
