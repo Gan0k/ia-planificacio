@@ -17,4 +17,5 @@
          (= (spent-days) 0)
          (= (min-days-viatge) 4))
   (:goal (<= (min-days-viatge) 0))
+  (:metric minimize (/ (sum-interest) (num-cities)))
 )

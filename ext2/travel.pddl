@@ -1,5 +1,5 @@
 (define (domain travel-strips)
-  (:requirements :strips :fluents)
+  (:requirements :strips :typing :fluents)
   (:types city hotel)
   (:predicates (in ?x - city) (visited ?x - city) (not-visited ?x - city)
            (connected ?x - city ?y - city)
@@ -12,8 +12,6 @@
               (num-cities)
               (sum-interest)
               (interest ?x - city))
-
-  (:metric minimize (/ (sum-interest) (num-cities)))
 
   (:action start
     :parameters (?x - city)
@@ -34,7 +32,7 @@
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
             (decrease (spent-days) (spent-days))
             (increase (num-cities) 1)
-            (increase (sum-interest) (sum-interest ?y))))
+            (increase (sum-interest) (interest ?y))))
 
   (:action go-against
     :parameters (?x - city ?y - city)
