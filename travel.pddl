@@ -12,7 +12,8 @@
   (:action start
     :parameters (?x - city)
     :precondition (not-started)
-    :effect (and (in ?x) (not (not-started)) (just-landed) (not (not-just-landed)) (visited ?x) (not (not-visited ?x)))) 
+    :effect (and (in ?x) (not (not-started)) (just-landed) (not (not-just-landed)) 
+            (visited ?x) (not (not-visited ?x)))) 
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)
