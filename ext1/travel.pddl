@@ -14,7 +14,7 @@
     :parameters (?x - city)
     :precondition (not-started)
     :effect (and (in ?x) (not (not-started)) 
-            (visited ?x) (not (not-visited ?x)) (decrease (spent-days) (spent-days))))
+            (visited ?x) (not (not-visited ?x))))
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)

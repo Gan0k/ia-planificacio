@@ -9,6 +9,8 @@
               (max-days)
               (spent-days)
               (min-days-viatge)
+              (sum-interest)
+              (interest ?x - city)
               (min-cost-travel)
               (max-cost-travel)
               (cost-travel)
@@ -19,7 +21,8 @@
     :parameters (?x - city)
     :precondition (not-started)
     :effect (and (in ?x) (not (not-started)) 
-            (visited ?x) (not (not-visited ?x))))
+            (visited ?x) (not (not-visited ?x))
+            (increase (sum-interest) (interest ?x))))
 
   (:action spend-night
     :parameters (?x - city ?h - hotel)
@@ -35,6 +38,7 @@
                   (<= (+ (cost-travel) (price ?x ?y)) (max-cost-travel)))
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
             (decrease (spent-days) (spent-days))
+            (increase (sum-interest) (interest ?y))
             (increase (cost-travel) (price ?x ?y))))
 
   (:action go-against
@@ -44,6 +48,7 @@
                   (<= (+ (cost-travel) (price ?y ?x)) (max-cost-travel)))
     :effect (and (not (in ?x)) (in ?y) (visited ?y) (not (not-visited ?y)) 
             (decrease (spent-days) (spent-days))
+            (increase (sum-interest) (interest ?y))
             (increase (cost-travel) (price ?y ?x))))
             
  )
