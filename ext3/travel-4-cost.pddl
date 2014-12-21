@@ -1,3 +1,7 @@
+;; El minim pressupost es 500, pero hi ha un trajecte del 
+;; viatge que ja costa 500, per tant es superarà el mínim 
+;; cost del viatge
+
 (define (problem four-cities)
   (:domain travel-strips)
   (:objects c1 c2 c3 c4 - city 

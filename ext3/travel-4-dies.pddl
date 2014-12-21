@@ -1,3 +1,6 @@
+;;El mínim de dies és 1, pero per tal de complir la restricció
+;;de cost mínim (500) el vaitge durarà més dies.
+
 (define (problem four-cities)
   (:domain travel-strips)
   (:objects c1 c2 c3 c4 - city 
