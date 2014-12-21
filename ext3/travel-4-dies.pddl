@@ -11,7 +11,7 @@
          (= (min-days) 1)
          (= (max-days) 1)
          (= (spent-days) 0)
-         (= (min-days-viatge) 2)
+         (= (min-days-viatge) 1)
          (= (cost-travel) 0)
          (= (min-cost-travel) 500)
          (= (max-cost-travel) 10000)
