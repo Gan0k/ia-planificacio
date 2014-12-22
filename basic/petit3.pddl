@@ -9,7 +9,7 @@
             (hotel-in h1 c1) (hotel-in h2 c1) (hotel-in h3 c1) 
             (hotel-in h4 c2) (hotel-in h5 c2) (hotel-in h6 c3) 
             (hotel-in h7 c4) (hotel-in h8 c5) (not-visited c1) (not-visited c2) (not-visited c3) 
-            (not-visited c4) (not-visited c5) (not-started) (not-just-landed) (= (min-ciutats) 4)
+            (not-visited c4) (not-visited c5) (not-started) (not-just-landed) (= (min-ciutats) 3)
 
     )
     (:goal (<= (min-ciutats) 0))
