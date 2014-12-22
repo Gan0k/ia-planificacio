@@ -3,7 +3,7 @@ ff: parsing domain file
 domain 'TRAVEL-STRIPS' defined
  ... done.
 ff: parsing problem file
-problem 'PETIT1' defined
+problem 'TEST-0-1' defined
  ... done.
 
 
