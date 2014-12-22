@@ -9,7 +9,7 @@
 ;         3: SPEND-NIGHT C1 H1
 
 
-(define (problem four-cities)
+(define (problem test-4-4)
   (:domain travel-strips)
   (:objects c1 c2 c3 - city 
             h1 h2 h3 - hotel)
@@ -19,15 +19,15 @@
          (not-started)
          (= (interest c1) 1)
          (= (interest c2) 3)
-         (= (interest c3) 2)
+         (= (interest c3) 3)
          (= (min-days) 1)
          (= (max-days) 1)
          (= (spent-days) 0)
          (= (min-days-viatge) 2)
          (= (sum-interest) 0)
          (= (cost-travel) 0)
-         (= (min-cost-travel) 100)
-         (= (max-cost-travel) 250)
+         (= (min-cost-travel) 0)
+         (= (max-cost-travel) 1000)
          (= (price c1 c2) 100)
          (= (price c1 c3) 100)
          (= (price c2 c3) 100)
@@ -38,5 +38,5 @@
   (:goal (and (>= (cost-travel) (min-cost-travel)) 
          (<= (min-days-viatge) 0)))
 
-  (:metric minimize (+ (cost-travel) (sum-interest)))
+  (:metric minimize (+ (cost-travel) (* 100 (sum-interest))))
 )
