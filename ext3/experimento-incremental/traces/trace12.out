@@ -7,6 +7,63 @@ problem 'TEST12' defined
  ... done.
 
 
+metric established (normalized to minimize): ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
 
-unknown optimization method . check input files
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
+    metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+advancing to distance:   24
+                         17
+                         16
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          7
+                          6
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: START C12
+        1: SPEND-NIGHT C12 H12
+        2: GO-AGAINST C12 C3
+        3: SPEND-NIGHT C3 H3
+        4: GO-AGAINST C3 C2
+        5: SPEND-NIGHT C2 H2
+        6: GO-ALONG C2 C11
+        7: SPEND-NIGHT C11 H11
+        8: GO-ALONG C11 C8
+        9: SPEND-NIGHT C8 H8
+       10: GO-ALONG C8 C6
+       11: SPEND-NIGHT C6 H6
+       12: GO-ALONG C6 C9
+       13: SPEND-NIGHT C9 H9
+       14: GO-AGAINST C9 C5
+       15: SPEND-NIGHT C5 H5
+       16: GO-AGAINST C5 C10
+       17: SPEND-NIGHT C10 H10
+       18: GO-AGAINST C10 C4
+       19: SPEND-NIGHT C4 H4
+       20: GO-ALONG C4 C7
+       21: SPEND-NIGHT C7 H7
+       22: GO-AGAINST C7 C1
+       23: SPEND-NIGHT C1 H1
+     
+
+time spent:    0.00 seconds instantiating 86 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 37 facts and 86 actions
+               0.00 seconds creating final representation with 37 relevant facts, 6 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 69 states, to a max depth of 0
+               0.00 seconds total time
 

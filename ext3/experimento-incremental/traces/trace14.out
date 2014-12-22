@@ -7,6 +7,67 @@ problem 'TEST14' defined
  ... done.
 
 
+metric established (normalized to minimize): ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
 
-unknown optimization method . check input files
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
+    metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+advancing to distance:   28
+                         21
+                         20
+                         19
+                         17
+                         15
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: START C13
+        1: SPEND-NIGHT C13 H13
+        2: GO-AGAINST C13 C10
+        3: SPEND-NIGHT C10 H10
+        4: GO-AGAINST C10 C4
+        5: SPEND-NIGHT C4 H4
+        6: GO-ALONG C4 C3
+        7: SPEND-NIGHT C3 H3
+        8: GO-AGAINST C3 C11
+        9: SPEND-NIGHT C11 H11
+       10: GO-AGAINST C11 C9
+       11: SPEND-NIGHT C9 H9
+       12: GO-AGAINST C9 C1
+       13: SPEND-NIGHT C1 H1
+       14: GO-ALONG C1 C5
+       15: SPEND-NIGHT C5 H5
+       16: GO-ALONG C5 C2
+       17: SPEND-NIGHT C2 H2
+       18: GO-ALONG C2 C12
+       19: SPEND-NIGHT C12 H12
+       20: GO-ALONG C12 C8
+       21: SPEND-NIGHT C8 H8
+       22: GO-AGAINST C8 C14
+       23: SPEND-NIGHT C14 H14
+       24: GO-AGAINST C14 C6
+       25: SPEND-NIGHT C6 H6
+       26: GO-ALONG C6 C7
+       27: SPEND-NIGHT C7 H7
+     
+
+time spent:    0.00 seconds instantiating 94 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 43 facts and 94 actions
+               0.00 seconds creating final representation with 43 relevant facts, 6 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.01 seconds searching, evaluating 833 states, to a max depth of 0
+               0.01 seconds total time
 

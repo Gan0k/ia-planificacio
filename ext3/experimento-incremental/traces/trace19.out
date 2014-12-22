@@ -1,0 +1,89 @@
+
+ff: parsing domain file
+domain 'TRAVEL-STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'TEST19' defined
+ ... done.
+
+
+metric established (normalized to minimize): ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
+    metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+advancing to distance:   38
+                         29
+                         28
+                         25
+                         24
+                         23
+                         22
+                         20
+                         18
+                         16
+                         14
+                         10
+                          9
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: START C3
+        1: SPEND-NIGHT C3 H3
+        2: GO-AGAINST C3 C13
+        3: SPEND-NIGHT C13 H13
+        4: GO-ALONG C13 C1
+        5: SPEND-NIGHT C1 H1
+        6: GO-ALONG C1 C17
+        7: SPEND-NIGHT C17 H17
+        8: GO-ALONG C17 C16
+        9: SPEND-NIGHT C16 H16
+       10: GO-AGAINST C16 C19
+       11: SPEND-NIGHT C19 H19
+       12: GO-ALONG C19 C14
+       13: SPEND-NIGHT C14 H14
+       14: GO-ALONG C14 C12
+       15: SPEND-NIGHT C12 H12
+       16: GO-ALONG C12 C9
+       17: SPEND-NIGHT C9 H9
+       18: GO-ALONG C9 C15
+       19: SPEND-NIGHT C15 H15
+       20: GO-AGAINST C15 C5
+       21: SPEND-NIGHT C5 H5
+       22: GO-ALONG C5 C7
+       23: SPEND-NIGHT C7 H7
+       24: GO-AGAINST C7 C18
+       25: SPEND-NIGHT C18 H18
+       26: GO-ALONG C18 C8
+       27: SPEND-NIGHT C8 H8
+       28: GO-ALONG C8 C2
+       29: SPEND-NIGHT C2 H2
+       30: GO-ALONG C2 C6
+       31: SPEND-NIGHT C6 H6
+       32: GO-ALONG C6 C4
+       33: SPEND-NIGHT C4 H4
+       34: GO-ALONG C4 C11
+       35: SPEND-NIGHT C11 H11
+       36: GO-ALONG C11 C10
+       37: SPEND-NIGHT C10 H10
+     
+
+time spent:    0.00 seconds instantiating 114 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 58 facts and 114 actions
+               0.00 seconds creating final representation with 58 relevant facts, 6 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.06 seconds searching, evaluating 3224 states, to a max depth of 0
+               0.06 seconds total time
+

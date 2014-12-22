@@ -7,6 +7,57 @@ problem 'TEST10' defined
  ... done.
 
 
+metric established (normalized to minimize): ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
 
-unknown optimization method . check input files
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
+    metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+advancing to distance:   20
+                         15
+                         14
+                         13
+                         12
+                         11
+                         10
+                          9
+                          7
+                          5
+                          4
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: START C7
+        1: SPEND-NIGHT C7 H7
+        2: GO-ALONG C7 C4
+        3: SPEND-NIGHT C4 H4
+        4: GO-ALONG C4 C10
+        5: SPEND-NIGHT C10 H10
+        6: GO-AGAINST C10 C3
+        7: SPEND-NIGHT C3 H3
+        8: GO-AGAINST C3 C9
+        9: SPEND-NIGHT C9 H9
+       10: GO-AGAINST C9 C5
+       11: SPEND-NIGHT C5 H5
+       12: GO-ALONG C5 C1
+       13: SPEND-NIGHT C1 H1
+       14: GO-AGAINST C1 C8
+       15: SPEND-NIGHT C8 H8
+       16: GO-ALONG C8 C6
+       17: SPEND-NIGHT C6 H6
+       18: GO-AGAINST C6 C2
+       19: SPEND-NIGHT C2 H2
+     
+
+time spent:    0.00 seconds instantiating 78 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 31 facts and 78 actions
+               0.00 seconds creating final representation with 31 relevant facts, 6 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 55 states, to a max depth of 0
+               0.00 seconds total time
 

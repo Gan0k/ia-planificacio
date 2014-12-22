@@ -14,14 +14,11 @@ checking for cyclic := effects --- OK.
 ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
     metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
 
-advancing to distance:   24
-                         16
-                         14
-                         11
-                         10
-                          9
-                          6
+advancing to distance:   10
+                          8
+                          7
                           5
+                          4
                           3
                           2
                           1
@@ -29,37 +26,23 @@ advancing to distance:   24
 
 ff: found legal plan as follows
 
-step    0: START C18
-        1: SPEND-NIGHT C18 H18
-        2: GO-ALONG C18 C1
+step    0: START C2
+        1: SPEND-NIGHT C2 H2
+        2: GO-ALONG C2 C1
         3: SPEND-NIGHT C1 H1
-        4: GO-AGAINST C1 C11
-        5: SPEND-NIGHT C11 H11
-        6: GO-AGAINST C11 C5
-        7: SPEND-NIGHT C5 H5
-        8: GO-ALONG C5 C24
-        9: SPEND-NIGHT C24 H24
-       10: GO-AGAINST C24 C13
-       11: SPEND-NIGHT C13 H13
-       12: GO-ALONG C13 C6
-       13: SPEND-NIGHT C6 H6
-       14: GO-AGAINST C6 C3
-       15: SPEND-NIGHT C3 H3
-       16: GO-ALONG C3 C20
-       17: SPEND-NIGHT C20 H20
-       18: GO-ALONG C20 C12
-       19: SPEND-NIGHT C12 H12
-       20: GO-ALONG C12 C19
-       21: SPEND-NIGHT C19 H19
-       22: GO-ALONG C19 C21
-       23: SPEND-NIGHT C21 H21
+        4: GO-AGAINST C1 C4
+        5: SPEND-NIGHT C4 H4
+        6: GO-ALONG C4 C3
+        7: SPEND-NIGHT C3 H3
+        8: GO-ALONG C3 C5
+        9: SPEND-NIGHT C5 H5
      
 
-time spent:    0.00 seconds instantiating 118 easy, 0 hard action templates
-               0.00 seconds reachability analysis, yielding 76 facts and 118 actions
-               0.00 seconds creating final representation with 76 relevant facts, 6 relevant fluents
+time spent:    0.00 seconds instantiating 30 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 16 facts and 30 actions
+               0.00 seconds creating final representation with 16 relevant facts, 6 relevant fluents
                0.00 seconds computing LNF
                0.00 seconds building connectivity graph
-               0.01 seconds searching, evaluating 86 states, to a max depth of 0
-               0.01 seconds total time
+               0.00 seconds searching, evaluating 21 states, to a max depth of 0
+               0.00 seconds total time
 

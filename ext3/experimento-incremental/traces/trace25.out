@@ -1,0 +1,46 @@
+
+ff: parsing domain file
+domain 'TRAVEL-STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'TEST25' defined
+ ... done.
+
+
+metric established (normalized to minimize): ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
+    metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+advancing to distance:   50
+                         36
+                         35
+                         34
+                         33
+                         28
+                         18
+                         16
+                         15
+                         14
+                         12
+                          8
+                          7
+                          6
+                          5
+                          4
+                          3
+
+best first search space empty! problem proven unsolvable.
+
+
+
+time spent:    0.00 seconds instantiating 138 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 76 facts and 138 actions
+               0.00 seconds creating final representation with 76 relevant facts, 6 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+             703.31 seconds searching, evaluating 15534043 states, to a max depth of 0
+             703.31 seconds total time
+

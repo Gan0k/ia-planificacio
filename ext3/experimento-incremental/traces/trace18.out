@@ -1,0 +1,81 @@
+
+ff: parsing domain file
+domain 'TRAVEL-STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'TEST18' defined
+ ... done.
+
+
+metric established (normalized to minimize): ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+checking for cyclic := effects --- OK.
+
+ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
+    metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
+
+advancing to distance:   36
+                         25
+                         24
+                         16
+                         14
+                         13
+                         12
+                         11
+                         10
+                          6
+                          5
+                          4
+                          3
+                          2
+                          1
+                          0
+
+ff: found legal plan as follows
+
+step    0: START C4
+        1: SPEND-NIGHT C4 H4
+        2: GO-AGAINST C4 C10
+        3: SPEND-NIGHT C10 H10
+        4: GO-ALONG C10 C13
+        5: SPEND-NIGHT C13 H13
+        6: GO-ALONG C13 C2
+        7: SPEND-NIGHT C2 H2
+        8: GO-ALONG C2 C1
+        9: SPEND-NIGHT C1 H1
+       10: GO-AGAINST C1 C15
+       11: SPEND-NIGHT C15 H15
+       12: GO-ALONG C15 C18
+       13: SPEND-NIGHT C18 H18
+       14: GO-AGAINST C18 C9
+       15: SPEND-NIGHT C9 H9
+       16: GO-ALONG C9 C5
+       17: SPEND-NIGHT C5 H5
+       18: GO-AGAINST C5 C6
+       19: SPEND-NIGHT C6 H6
+       20: GO-ALONG C6 C12
+       21: SPEND-NIGHT C12 H12
+       22: GO-AGAINST C12 C14
+       23: SPEND-NIGHT C14 H14
+       24: GO-ALONG C14 C7
+       25: SPEND-NIGHT C7 H7
+       26: GO-AGAINST C7 C11
+       27: SPEND-NIGHT C11 H11
+       28: GO-AGAINST C11 C16
+       29: SPEND-NIGHT C16 H16
+       30: GO-ALONG C16 C3
+       31: SPEND-NIGHT C3 H3
+       32: GO-AGAINST C3 C8
+       33: SPEND-NIGHT C8 H8
+       34: GO-AGAINST C8 C17
+       35: SPEND-NIGHT C17 H17
+     
+
+time spent:    0.00 seconds instantiating 110 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 55 facts and 110 actions
+               0.00 seconds creating final representation with 55 relevant facts, 6 relevant fluents
+               0.00 seconds computing LNF
+               0.00 seconds building connectivity graph
+               0.09 seconds searching, evaluating 6204 states, to a max depth of 0
+               0.09 seconds total time
+

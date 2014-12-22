@@ -14,34 +14,24 @@ checking for cyclic := effects --- OK.
 ff: search configuration is  best-first on 1*g(s) + 5*h(s) where
     metric is ((1.00*[RF0](COST-TRAVEL)) - () + 0.00)
 
-advancing to distance:   10
-                          8
-                          7
-                          5
-                          4
+advancing to distance:    5
                           2
                           1
                           0
 
 ff: found legal plan as follows
 
-step    0: START C10
-        1: SPEND-NIGHT C10 H10
-        2: GO-ALONG C10 C7
-        3: SPEND-NIGHT C7 H7
-        4: GO-AGAINST C7 C8
-        5: SPEND-NIGHT C8 H8
-        6: GO-AGAINST C8 C6
-        7: SPEND-NIGHT C6 H6
-        8: GO-ALONG C6 C9
-        9: SPEND-NIGHT C9 H9
+step    0: START C2
+        1: SPEND-NIGHT C2 H2
+        2: GO-ALONG C2 C1
+        3: SPEND-NIGHT C1 H1
      
 
-time spent:    0.00 seconds instantiating 58 easy, 0 hard action templates
-               0.00 seconds reachability analysis, yielding 31 facts and 58 actions
-               0.00 seconds creating final representation with 31 relevant facts, 6 relevant fluents
+time spent:    0.00 seconds instantiating 6 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 7 facts and 6 actions
+               0.00 seconds creating final representation with 7 relevant facts, 6 relevant fluents
                0.00 seconds computing LNF
                0.00 seconds building connectivity graph
-               0.00 seconds searching, evaluating 28 states, to a max depth of 0
+               0.00 seconds searching, evaluating 6 states, to a max depth of 0
                0.00 seconds total time
 
