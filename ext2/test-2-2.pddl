@@ -1,4 +1,4 @@
-(define (problem four-cities)
+(define (problem test-2-2)
   (:domain travel-strips)
   (:objects c1 c2 c3 c4 - city 
             h1 h2 h3 h4 - hotel)
@@ -15,7 +15,7 @@
          (= (min-days) 1)
          (= (max-days) 1)
          (= (spent-days) 0)
-         (= (min-days-viatge) 1)
+         (= (min-days-viatge) 2)
          (= (sum-interest) 0))
 
   (:goal (<= (min-days-viatge) 0))

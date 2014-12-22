@@ -1,4 +1,4 @@
-(define (problem four-cities)
+(define (problem test-2-1)
   (:domain travel-strips)
   (:objects c1 c2 c3 c4 - city 
             h1 h2 h3 h4 - hotel)
