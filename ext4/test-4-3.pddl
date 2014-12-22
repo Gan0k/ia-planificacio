@@ -1,11 +1,4 @@
-; Com nomes agafem un dia, mirem que vagi a la ciutat c1
-; ja que es l'interes mes "alt"
-
-
-; step    0: START C1
-;         1: SPEND-NIGHT C1 H1
-
-(define (problem four-cities)
+(define (problem test-4-3)
   (:domain travel-strips)
   (:objects c1 c2 c3 - city 
             h1 h2 h3 - hotel)

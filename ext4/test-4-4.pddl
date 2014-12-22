@@ -1,14 +1,3 @@
-; En aquest cas, tot i que c1 i c2 son mes interesants que c3, comprovem que
-; al no arribar els diners pels dos, haura d'agafar c2 per complir la 
-; restriccio del minim de dies, ja que l'hotel seu es mes barat, i tot seguit
-; anar a C1 que es el que te l'interes mes alt que c2.
-
-; step    0: START C2
-;         1: SPEND-NIGHT C2 H2
-;         2: GO-AGAINST C2 C1
-;         3: SPEND-NIGHT C1 H1
-
-
 (define (problem test-4-4)
   (:domain travel-strips)
   (:objects c1 c2 c3 - city 
