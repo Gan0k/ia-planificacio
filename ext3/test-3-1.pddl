@@ -4,7 +4,7 @@
 ; step    0: START C3
 ;         1: SPEND-NIGHT C3 H3
 
-(define (problem prova1)
+(define (problem test-3-1)
     (:requirements :strips :fluents)
     (:domain travel-strips)
     (:objects c1 c2 c3 - city

@@ -8,7 +8,7 @@
 ;         3: SPEND-NIGHT C2 H2
 
 
-(define (problem prova1)
+(define (problem test-3-2)
     (:requirements :strips :fluents)
     (:domain travel-strips)
     (:objects c1 c2 c3 - city
